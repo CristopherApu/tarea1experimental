@@ -4,6 +4,11 @@
 #include <wiringPi.h>
 #include <cstdlib>
 
+    //PROTOTIPOS DE FUNCIONES
+    int desempaquetamiento(grupo6 &proto, int tam);
+    void callback_receptor(void);
+    void procesa_bit(bool level);
+
     //VARIABLE GLOBAL
     grupo6 proto;
     bool transmision_iniciada_receptor = false;
@@ -53,10 +58,10 @@ int main(){
                     void porcentajesmensajes();
                 } else if (proto.cmd == 3){
                     printf("Aviso: se iniciará la función recibir_guardar desde receptor\n");
-                    void recibir_guardar();
+                    recibir_guardar(proto);
                 } else if (proto.cmd == 4){
                     printf("Aviso: se iniciará la función mostrar_archivo desde receptor\n");
-                    void mostrar_archivo();
+                    mostrar_archivo();
                 }
     
     return 0;

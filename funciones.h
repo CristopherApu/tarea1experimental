@@ -20,12 +20,9 @@ void recibir(grupo6 &proto);
 void archivo_texto();
 
 int empaquetamiento(grupo6 &proto);
-int desempaquetamiento(grupo6 &proto, int tam);
 int fcs(BYTE *arr, int tam_fcs);
 
 void callback_emisor(void);
-void callback_receptor(void);
-void procesa_bit(bool level);
 void startTransmission_emisor();
 void porcentajes_mensajes();
 void guardar(const char* mensaje);
