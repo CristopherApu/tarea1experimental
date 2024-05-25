@@ -58,31 +58,6 @@ void enviar(grupo6 &proto){
     startTransmission_emisor();
     printf("Mensaje enviado correctamente!\n");
 }
-void recibir(grupo6 &proto){
-    printf("Aviso: se iniciará la función recibir\n");
-    printf("inicia void recibir");
-    bool estado = desempaquetamiento(proto, proto.lng); // Definimos la variable estado para almacenar el retorno de la función desempaquetamiento
-    printf("Se recibió un mensaje de manera %s\n",estado?"incorrecta":"correcta");
-    printf("El largo del mensaje es de %d bytes\n¿Desea visualizar el mensaje? (S/N): ", proto.lng);
-    printf("%s\n",proto.data);
-    char SN;
-    scanf("%c", &SN);
-    switch (SN) {
-        case 'S':
-        case 's':
-        case 'Y':
-        case 'y':
-        printf("%s\n",proto.data);
-            break;
-        case 'N':
-        case 'n':
-            printf("Entendido!\n");
-            break;
-        default:
-            printf("Opción inválida.\n");
-            break;
-    }
-}
 void archivo_texto(){
     printf("Aviso: se iniciará la función archivo_texto\n");
 }
