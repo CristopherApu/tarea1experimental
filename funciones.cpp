@@ -73,7 +73,6 @@ int empaquetamiento(grupo6 &proto) {
     tam_emp = proto.lng + 4;
     return tam_emp;   // Indica el tamaño del paquete
 }
-
 int fcs(BYTE *arr, int tam_fcs) {
     printf("Aviso: se iniciará la función FCS\n");
     int valor_fcs = 0; // Inicializa el valor del fcs a 0
@@ -150,16 +149,6 @@ void guardar(const char* mensaje) {
     fprintf(archivo, "%s", mensaje);
     fclose(archivo);
     printf("Mensaje guardado en 'mensaje.txt'.\n");
-}
-void recibir_guardar(grupo6 &proto) {
-    printf("Aviso: se iniciará la función recibir_guardar\n");
-    bool estado = desempaquetamiento(proto, proto.lng); // Desempaqueta el mensaje
-    if (estado) {
-        printf("Mensaje recibido correctamente.\n");
-        guardar(reinterpret_cast<char*>(proto.data));
-    } else {
-        printf("Error en el desempaquetamiento del mensaje.\n");
-    }
 }
 void mostrar_archivo() {
     printf("Aviso: se iniciará la función mostrar_archivo\n");
