@@ -58,7 +58,6 @@ int main(){
                     void porcentajesmensajes();
                 } else if (proto.cmd == 3){
                     printf("Aviso: se iniciará la función recibir_guardar desde receptor\n");
-                    recibir_guardar(proto);
                 } else if (proto.cmd == 4){
                     printf("Aviso: se iniciará la función mostrar_archivo desde receptor\n");
                     mostrar_archivo();
